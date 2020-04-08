@@ -42,6 +42,22 @@ room['treasure'].s_to = room['narrow']
 # Write a loop that:
 #
 # * Prints the current room name
+
+while True:
+    print(player.current_room.namepython3)
+    print("")
+    print(player.current_room.description)
+# READ   
+    cmd = input("\n =====> ")
+# EVAL
+    if cmd == 'q':
+        print("Goodbye!\n")
+        exit(0)
+    elif cmd in directions:
+        player.travel(cmd)
+    else:
+        print("I did not understand that command")
+        
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 #
